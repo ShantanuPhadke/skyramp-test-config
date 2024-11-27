@@ -5,7 +5,7 @@ from sqlmodel import Field, Session, SQLModel, create_engine
 
 # Model class definition
 class Item(SQLModel, table=True):
-    id: int | None = Field(default=None, primary_key=True)
+    id: int = Field(default=None, primary_key=True)
     name: str = Field(index = True)
     description: str
     price: float

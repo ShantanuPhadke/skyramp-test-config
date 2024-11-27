@@ -24,6 +24,6 @@ def read_item(item_id: int, session: SessionDep) -> Item:
         raise HTTPException(status_code=404, detail="Item not found")
     return item
 
-@app.post("/item")
+@app.post("/items/")
 def read_item(item: Item) -> Item:
     return item

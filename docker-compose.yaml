@@ -3,10 +3,15 @@ services:
     image: public.ecr.aws/j1n2c2p2/rampup/worker:latest
     platform: linux/amd64
     volumes:
-      - skyramp:/etc/skyramp
+      - skyramp:/etc/skyramp  
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - "35142:35142"
     restart: always
+  service:
+    platform: linux/amd64
+    build: .
+    ports:
+      - "8000:8000"
 volumes:
   skyramp:

@@ -3,7 +3,7 @@ import skyramp
 # Initialize Endpoint(s)
 items_endpoint = skyramp.RestEndpoint(
     name="service",
-    port=443,
+    port=8000,
     rest_path="/items/"
 )
 
@@ -34,7 +34,7 @@ def add_items_functional_scenario():
 
     scenario.add_assert_v1(
         assert_value="requests.items_POST.code",
-        assert_expected_value="201",
+        assert_expected_value="200",
         assert_step_name="items_functional_scenario-1",
         description="Asset of scenario step items_functional_scenario-0 - Endpoint /items and Method POST"
     )
@@ -55,4 +55,6 @@ def execute_tests(address="localhost:35142", global_vars={}, **kwargs):
 
     return status
 
-execute_tests()
+if __name__ == "__main__":
+    args = skyramp.parse_args()
+    execute_tests(**args)
