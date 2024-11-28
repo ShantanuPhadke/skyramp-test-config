@@ -2,7 +2,7 @@
 Sample test configuration using Skyramp's set of tools
 
 ## Written API Test Cases Feedback
-(1) There should be an additional step to dockerize the current project that the user is trying to test. This step should be added in case a developer is:<br/>&nbsp(a) trying to use skyramp for a toy use case prior to integrating into their companies larger projects <br/>&nbsp(b) is part of a smaller startup OR a new team in a larger company that is getting its infra set up / has a very small project where the v1 is still being built up.
+(1) There should be an additional step to dockerize the current project that the user is trying to test. This step should be added in case a developer is:<br/>&nbsp;&nbsp;&nbsp;(a) trying to use skyramp for a toy use case prior to integrating into their companies larger projects <br/>&nbsp;&nbsp;&nbsp;(b) is part of a smaller startup OR a new team in a larger company that is getting its infra set up / has a very small project where the v1 is still being built up.
 
 ## Performance Test Cases Feedback
 (1) The documentation has a slight issue where it assigns invalid integers to input variables like duration (eg duration=10s). Using just normal integers fixes the runtime issues here.
